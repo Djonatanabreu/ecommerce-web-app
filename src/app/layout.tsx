@@ -1,9 +1,15 @@
-import StyledComponentsRegistry from "@/lib/registry";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./default.css";
+import { Inter, Poppins } from "next/font/google";
+import "./global.css";
+import StyledJsxRegistry from "@/lib/registry";
+import Header from "@/components/layout/header/header";
 
 const inter = Inter({ subsets: ["latin"] });
+export const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  variable: "--font-poppins",
+});
 
 export const metadata: Metadata = {
   title: "E-Commerce Wyrn",
@@ -17,8 +23,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={inter.className}>
-        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+      <body className={poppins.className}>
+        <StyledJsxRegistry>
+          <Header />
+          {children}
+        </StyledJsxRegistry>
       </body>
     </html>
   );

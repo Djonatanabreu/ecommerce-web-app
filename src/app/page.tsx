@@ -1,10 +1,10 @@
-"use client";
-import { BasicComponents } from "./styles";
+import "../app/global.css";
+import { Container, Title } from "@/components/patterns/patterns";
 
 export default function Home() {
   return (
-    <BasicComponents.Container>
-      <BasicComponents.Title>Starting Your E-Commerce</BasicComponents.Title>
-    </BasicComponents.Container>
+    <Container>
+      <Title>Starting Your Wyrn E-Commerce</Title>
+    </Container>
   );
 }

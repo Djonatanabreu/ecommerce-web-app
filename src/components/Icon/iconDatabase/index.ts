@@ -1,0 +1,8 @@
+export { CheckMark } from "./CheckMark";
+export { ArrowBack } from "./ArrowBack";
+export { ArrowForward } from "./ArrowForward";
+export { CloseIcon } from "./Close";
+export { MagnifyingGlass } from "./MagnifyingGlass";
+export { ArrowDown } from "./ArrowDown";
+export { Wishlist } from "./Wishlist";
+export { ShoppingCart } from "./ShoppingCart";

@@ -1,10 +1,13 @@
 "use client";
-import { BasicComponents } from "./styles";
+
+import { Drawer } from "@/components/Drawer/Drawer";
+import "../app/global.css";
+import { Container } from "@/components/Patterns/patterns";
 
 export default function Home() {
   return (
-    <BasicComponents.Container>
-      <BasicComponents.Title>Starting Your E-Commerce</BasicComponents.Title>
-    </BasicComponents.Container>
+    <Container>
+      <Drawer />
+    </Container>
   );
 }

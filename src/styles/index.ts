@@ -3,7 +3,8 @@ const secondary = "#000";
 export interface DefaultTheme {
   primary: string;
   secondary: string;
-  text: string;
+  text: { white: string; dark: string };
+  heading: string;
   border: string;
   header: string;
   background: string;
@@ -64,7 +65,7 @@ export interface DefaultTheme {
       18: string;
       20: string;
       22: string;
-      26: string;
+      24: string;
       30: string;
     };
   };
@@ -73,7 +74,8 @@ export interface DefaultTheme {
 export const defaultTheme: DefaultTheme = {
   primary,
   secondary,
-  text: "#FAFAFA" || "black",
+  text: { white: "#FAFAFA", dark: "#000" },
+  heading: "#000",
   border: secondary,
   background: "#FFFFFF",
   error: "#FF5630",
@@ -134,7 +136,7 @@ export const defaultTheme: DefaultTheme = {
       18: `${18}px`,
       20: `${20}px`,
       22: `${22}px`,
-      26: `${26}px`,
+      24: `${24}px`,
       30: `${30}px`,
     },
   },

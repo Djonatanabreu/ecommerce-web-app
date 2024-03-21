@@ -1,6 +1,7 @@
 "use client";
 
 import { defaultTheme } from "@/styles";
+import Link from "next/link";
 import styled from "styled-components";
 
 const size = {
@@ -35,19 +36,18 @@ export const CleanInlineContainer = styled.div`
   justify-content: center;
   align-items: center;
   gap: 5px;
-  /* margin-left: 220px; */
 
   @media ${device.tablet} {
-    /* margin-left: 0; */
   }
+`;
+
+export const CleanContainer = styled.div`
+  flex: 1;
 `;
 
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding: 6rem;
   min-height: 100vh;
 `;
 
@@ -57,15 +57,45 @@ export const Title = styled.h1((props) => ({
   fontWeight: 400,
 }));
 
+export const CleanBtnText = styled(Link)`
+  text-decoration: none;
+  font-size: ${defaultTheme.fonts.size["16"]};
+  color: ${defaultTheme.text.dark};
+
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
 export const Pattern = {
-  Header: styled.header`
+  HeaderContainer: styled.header`
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 142px;
+    justify-content: space-between;
+  `,
+
+  HorizontalLine: styled.hr`
+    height: 0.5px;
+    background-color: ${defaultTheme.secondary};
+    opacity: 0.3;
+  `,
+
+  VerticalLine: styled.div`
+    width: 1px;
+    height: 385px;
+    background-color: ${defaultTheme.secondary};
+    opacity: 0.2;
+  `,
+
+  TopHeaderInfoContainer: styled.div`
     margin: 0;
-    padding: 0 90px;
+    padding: 0 135px;
     display: flex;
     background-color: ${defaultTheme.secondary};
     align-items: center;
     justify-content: space-between;
-    flex: 1;
     height: 48px;
 
     @media ${device.tablet} {
@@ -74,7 +104,7 @@ export const Pattern = {
     }
   `,
 
-  HeaderContainer: styled.div`
+  TopHeaderInfoContentBox: styled.div`
     width: 100%;
     margin: 0;
     padding: 0 10px;
@@ -88,7 +118,7 @@ export const Pattern = {
 
   Text: styled(CleanText)`
     font-size: 14px;
-    color: ${defaultTheme.text};
+    color: ${defaultTheme.text.white};
     text-align: center;
 
     @media ${device.tablet} {
@@ -97,10 +127,17 @@ export const Pattern = {
     }
   `,
 
+  Heading: styled(CleanText)`
+    font-size: ${defaultTheme.fonts.size["24"]};
+    color: ${defaultTheme.heading};
+    font-weight: 500;
+    padding: 0 6px;
+  `,
+
   LinkText: styled.a`
     margin: 0;
     padding: 0;
-    color: ${defaultTheme.text};
+    color: ${defaultTheme.text.white};
     font-weight: 500;
 
     @media ${device.tablet} {

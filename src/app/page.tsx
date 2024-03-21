@@ -1,10 +1,13 @@
+"use client";
+
+import { Drawer } from "@/components/Drawer/Drawer";
 import "../app/global.css";
-import { Container, Title } from "@/components/patterns/patterns";
+import { Container } from "@/components/Patterns/patterns";
 
 export default function Home() {
   return (
     <Container>
-      <Title>Starting Your Wyrn E-Commerce</Title>
+      <Drawer />
     </Container>
   );
 }

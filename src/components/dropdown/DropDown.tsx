@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import { Icon } from "../Icon/Icon";
-import { CleanInlineContainer, Pattern } from "../patterns/patterns";
+import { CleanInlineContainer, Pattern } from "../Patterns/patterns";
 
 export const DropDown = ({ children }: { children: ReactNode }) => {
   return (

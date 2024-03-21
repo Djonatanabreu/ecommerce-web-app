@@ -4,7 +4,9 @@ export type IconName =
   | "ArrowForward"
   | "CloseIcon"
   | "MagnifyingGlass"
-  | "ArrowDown";
+  | "ArrowDown"
+  | "Wishlist"
+  | "ShoppingCart";
 
 export interface IconProps {
   name: IconName;

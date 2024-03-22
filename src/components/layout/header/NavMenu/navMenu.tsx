@@ -3,6 +3,7 @@ import {
   HeaderNavIconBox,
   IconBox,
   NavMenuStyled,
+  ShoppingCartIcon,
   WishlistIcon,
 } from "./styles";
 
@@ -60,7 +61,7 @@ export const NavigationMenu = () => {
             }}
             name='Wishlist'
           />
-          <Icon
+          <ShoppingCartIcon
             onClick={() => {
               console.log("hello");
             }}

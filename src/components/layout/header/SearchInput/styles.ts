@@ -21,7 +21,7 @@ export const StyledInput = styled.div`
   }
 
   @media ${device.tablet} {
-    max-width: 60%;
+    max-width: 70%;
   }
 `;
 

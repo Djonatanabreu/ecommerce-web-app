@@ -8,7 +8,6 @@ export const DrawerContainer = styled.div`
   padding-left: 135px;
 
   @media ${device.tablet} {
-    background-color: greenyellow;
     padding: 0;
     max-width: 50%;
   }

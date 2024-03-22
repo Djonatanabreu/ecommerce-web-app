@@ -77,7 +77,6 @@ export const Pattern = {
 
     @media ${device.tablet} {
       height: 50%;
-      background-color: sandybrown;
     }
   `,
 

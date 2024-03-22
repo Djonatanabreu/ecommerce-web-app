@@ -1,3 +1,5 @@
+import { Icon } from "@/components/Icon/Icon";
+import { IconProps } from "@/components/Icon/types";
 import { CleanBtnText, device } from "@/components/Patterns/patterns";
 import styled from "styled-components";
 
@@ -55,10 +57,32 @@ export const HeaderNavIconBox = styled.div`
   align-items: center;
   gap: 10px;
   padding: 0 5px;
+
+  @media ${device.tablet} {
+    flex-direction: column-reverse;
+  }
+`;
+
+export const IconBox = styled.div`
+  width: 70px;
+
+  @media ${device.tablet} {
+  }
 `;
 
 export const HamburgerButton = styled.button`
   display: none;
+`;
+
+export const WishlistIcon = styled(Icon)`
+  fill: ${(props) => props.fill || "none"};
+  cursor: pointer;
+
+  &:focus,
+  &:active {
+    fill: red;
+    stroke: #ff0000;
+  }
 `;
 
 // @media ${device.laptop} {

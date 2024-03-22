@@ -1,4 +1,5 @@
 import { Icon } from "@/components/Icon/Icon";
+import { device } from "@/components/Patterns/patterns";
 import { defaultTheme } from "@/styles";
 import styled from "styled-components";
 
@@ -17,6 +18,10 @@ export const StyledInput = styled.div`
 
   &:focus-within {
     border-color: #000;
+  }
+
+  @media ${device.tablet} {
+    max-width: 60%;
   }
 `;
 

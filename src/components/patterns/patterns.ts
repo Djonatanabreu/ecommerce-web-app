@@ -74,6 +74,11 @@ export const Pattern = {
     flex: 1;
     height: 142px;
     justify-content: space-between;
+
+    @media ${device.tablet} {
+      height: 50%;
+      background-color: sandybrown;
+    }
   `,
 
   HorizontalLine: styled.hr`

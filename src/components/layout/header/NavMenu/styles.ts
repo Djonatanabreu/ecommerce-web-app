@@ -1,3 +1,5 @@
+import { Icon } from "@/components/Icon/Icon";
+import { IconProps } from "@/components/Icon/types";
 import { CleanBtnText, device } from "@/components/Patterns/patterns";
 import styled from "styled-components";
 
@@ -14,6 +16,7 @@ export const NavMenuStyled = {
       flex-direction: column;
       justify-content: center;
       gap: 1rem;
+      padding: 0;
     }
   `,
 
@@ -28,7 +31,9 @@ export const NavMenuStyled = {
     gap: 60px;
 
     @media ${device.laptop} {
-      display: none;
+      /* display: none; */
+      gap: 40px;
+      justify-content: space-between;
 
       &.show {
         display: flex;
@@ -45,7 +50,11 @@ export const NavMenuStyled = {
     }
   `,
 
-  Option: styled.li``,
+  Option: styled.li`
+    @media ${device.laptop} {
+      /* display: none; */
+    }
+  `,
 
   ButtonText: styled(CleanBtnText)``,
 };
@@ -55,10 +64,41 @@ export const HeaderNavIconBox = styled.div`
   align-items: center;
   gap: 10px;
   padding: 0 5px;
+  margin-bottom: 10px;
+
+  @media ${device.tablet} {
+  }
+`;
+
+export const IconBox = styled.div`
+  width: 70px;
+
+  @media ${device.tablet} {
+  }
 `;
 
 export const HamburgerButton = styled.button`
   display: none;
+`;
+
+export const WishlistIcon = styled(Icon)`
+  fill: ${(props) => props.fill || "none"};
+  cursor: pointer;
+
+  &:focus,
+  &:active {
+    fill: red;
+    stroke: #ff0000;
+  }
+`;
+export const ShoppingCartIcon = styled(Icon)`
+  fill: ${(props) => props.fill || "none"};
+  cursor: pointer;
+
+  &:focus,
+  &:active {
+    opacity: 0.5;
+  }
 `;
 
 // @media ${device.laptop} {

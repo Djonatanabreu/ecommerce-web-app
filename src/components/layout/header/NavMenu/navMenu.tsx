@@ -1,10 +1,17 @@
 import { Pattern } from "@/components/Patterns/patterns";
-import { HeaderNavIconBox, NavMenuStyled } from "./styles";
+import {
+  HeaderNavIconBox,
+  IconBox,
+  NavMenuStyled,
+  ShoppingCartIcon,
+  WishlistIcon,
+} from "./styles";
 
 import { useState, useEffect, EventHandler } from "react";
 import { HamburgerButton } from "./styles";
 import { SearchInput } from "../SearchInput/SearchInput";
 import { Icon } from "@/components/Icon/Icon";
+import { Wishlist } from "@/components/Icon/iconDatabase";
 
 export const NavigationMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -46,8 +53,21 @@ export const NavigationMenu = () => {
 
       <HeaderNavIconBox>
         <SearchInput />
-        <Icon name='Wishlist' />
-        <Icon name='ShoppingCart' />
+
+        <IconBox>
+          <WishlistIcon
+            onClick={() => {
+              console.log("hello");
+            }}
+            name='Wishlist'
+          />
+          <ShoppingCartIcon
+            onClick={() => {
+              console.log("hello");
+            }}
+            name='ShoppingCart'
+          />
+        </IconBox>
       </HeaderNavIconBox>
     </NavMenuStyled.Container>
   );

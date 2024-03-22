@@ -1,8 +1,8 @@
 import { defaultTheme } from "@/styles";
-import * as React from "react";
+import { SVGProps } from "react";
 
-export const ArrowForward = (props: React.SVGProps<any>) => (
-  <svg width={30} height={30} fill={defaultTheme.primary} {...props}>
+export const ArrowForward = (props: SVGProps<SVGSVGElement>) => (
+  <svg width={30} height={30} fill={defaultTheme.primary as string} {...props}>
     <path
       transform={"scale(0.9)"}
       stroke={defaultTheme.primary}

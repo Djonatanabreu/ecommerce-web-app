@@ -1,3 +1,5 @@
+import { SVGProps } from "react";
+
 export type IconName =
   | "CheckMark"
   | "ArrowBack"
@@ -8,6 +10,6 @@ export type IconName =
   | "Wishlist"
   | "ShoppingCart";
 
-export interface IconProps {
+export interface IconProps extends SVGProps<SVGSVGElement> {
   name: IconName;
 }

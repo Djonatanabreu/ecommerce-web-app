@@ -1,6 +1,6 @@
 import { SVGProps } from "react";
 
-export const ArrowDown = (props: SVGProps<any>) => (
+export const ArrowDown = (props: SVGProps<SVGSVGElement>) => (
   <svg width={22} height={22} viewBox='4.5 3.5 16 16' fill='none' {...props}>
     <path
       fill='#fff'

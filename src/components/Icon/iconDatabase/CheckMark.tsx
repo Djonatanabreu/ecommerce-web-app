@@ -1,4 +1,6 @@
-export const CheckMark = (props: React.SVGProps<any>) => (
+import { SVGProps } from "react";
+
+export const CheckMark = (props: SVGProps<SVGSVGElement>) => (
   <svg height='27' viewBox='0 0 22 28' width='30' color={"white"} {...props}>
     <path
       stroke={"white"}

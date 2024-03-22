@@ -1,4 +1,3 @@
-import * as React from "react";
 import { SVGProps } from "react";
 export const ShoppingCart = (props: SVGProps<SVGSVGElement>) => (
   <svg width={32} height={32} fill='none' {...props}>

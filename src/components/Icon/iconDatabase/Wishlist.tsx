@@ -1,9 +1,7 @@
-import * as React from "react";
 import { SVGProps } from "react";
 export const Wishlist = (props: SVGProps<SVGSVGElement>) => (
-  <svg width={32} height={32} fill='none' {...props}>
+  <svg width={32} height={32} fill='none' stroke='#000' {...props}>
     <path
-      stroke='#000'
       strokeLinecap='round'
       strokeLinejoin='round'
       strokeWidth={1.5}

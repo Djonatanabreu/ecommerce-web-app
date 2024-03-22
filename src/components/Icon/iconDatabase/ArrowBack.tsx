@@ -1,10 +1,7 @@
-import * as React from "react";
+import { SVGProps } from "react";
 
-interface ArrowBackProps extends React.SVGProps<any> {
-  onPress: () => void;
-}
-export const ArrowBack = ({ fill, onPress, ...props }: ArrowBackProps) => (
-  <svg width={30} height={30} fill={"#fff"} onClick={onPress} {...props}>
+export const ArrowBack = (props: SVGProps<SVGSVGElement>) => (
+  <svg width={30} height={30} fill={"#fff"} {...props}>
     <path
       transform={"scale(0.9)"}
       stroke={"#fff"}

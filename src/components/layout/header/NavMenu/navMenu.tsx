@@ -7,14 +7,12 @@ import {
   WishlistIcon,
 } from "./styles";
 
-import { useState, useEffect, EventHandler } from "react";
-import { HamburgerButton } from "./styles";
+import { useState, useEffect } from "react";
 import { SearchInput } from "../SearchInput/SearchInput";
-import { Icon } from "@/components/Icon/Icon";
-import { Wishlist } from "@/components/Icon/iconDatabase";
 
 export const NavigationMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [wishlistColor, setWishlistColor] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -40,7 +38,6 @@ export const NavigationMenu = () => {
   return (
     <NavMenuStyled.Container>
       <Pattern.Heading>Exclusive</Pattern.Heading>
-      <HamburgerButton onClick={toggleMenu}>XMenu</HamburgerButton>
       <NavMenuStyled.ListOptions className={isOpen ? "show" : ""}>
         {navMenuOptions.map((option) => (
           <NavMenuStyled.Option key={option}>
@@ -57,16 +54,13 @@ export const NavigationMenu = () => {
         <IconBox>
           <WishlistIcon
             onClick={() => {
-              console.log("hello");
+              setWishlistColor(!wishlistColor);
             }}
+            fill={wishlistColor ? "#ff0000" : "none"}
             name='Wishlist'
+            stroke={wishlistColor ? "#ff0000" : "#000"}
           />
-          <ShoppingCartIcon
-            onClick={() => {
-              console.log("hello");
-            }}
-            name='ShoppingCart'
-          />
+          <ShoppingCartIcon onClick={() => {}} name='ShoppingCart' />
         </IconBox>
       </HeaderNavIconBox>
     </NavMenuStyled.Container>

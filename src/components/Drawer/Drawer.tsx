@@ -1,6 +1,5 @@
 "use cliente";
 
-import { ReactNode } from "react";
 import {
   BtnLink,
   DrawerBtnLinkList,

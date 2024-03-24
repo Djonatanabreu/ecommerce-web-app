@@ -48,7 +48,7 @@ export const CleanContainer = styled.div`
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  /* min-height: 100vh; */
 `;
 
 export const Title = styled.h1((props) => ({
@@ -73,6 +73,7 @@ export const Pattern = {
     flex-direction: column;
     flex: 1;
     height: 142px;
+    gap: 0.5rem;
     justify-content: space-between;
 
     @media ${device.tablet} {
@@ -102,8 +103,7 @@ export const Pattern = {
     justify-content: space-between;
     height: 48px;
 
-    @media ${device.tablet} {
-      margin-right: 0;
+    @media ${device.laptop} {
       padding: 0 10px;
     }
   `,
@@ -113,7 +113,7 @@ export const Pattern = {
     margin: 0;
     padding: 0 10px;
     display: flex;
-    background-color: ${defaultTheme.secondary};
+    background-color: transparent;
     align-items: center;
     justify-content: center;
     height: 48px;
@@ -136,6 +136,7 @@ export const Pattern = {
     color: ${defaultTheme.heading};
     font-weight: 500;
     padding: 0 6px;
+    text-align: center;
   `,
 
   LinkText: styled.a`

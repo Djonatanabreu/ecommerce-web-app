@@ -20,7 +20,7 @@ export const StyledInput = styled.div`
     border-color: #000;
   }
 
-  @media ${device.tablet} {
+  @media ${device.laptop} {
     max-width: 70%;
   }
 `;
@@ -29,7 +29,7 @@ export const Input = styled.div`
   align-items: center;
   justify-content: space-between;
   flex: 1;
-  position: relative;
+  /* position: relative; */
   display: flex;
   input {
     background-color: transparent;

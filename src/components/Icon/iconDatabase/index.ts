@@ -6,3 +6,4 @@ export { MagnifyingGlass } from "./MagnifyingGlass";
 export { ArrowDown } from "./ArrowDown";
 export { Wishlist } from "./Wishlist";
 export { ShoppingCart } from "./ShoppingCart";
+export { Burguer } from "./Burguer";

@@ -2,16 +2,25 @@
 
 import {
   BtnLink,
+  DrawerBtnLink,
   DrawerBtnLinkList,
   DrawerBurguerIcon,
   DrawerContainer,
   DrawerContent,
 } from "./styles";
 import { Pattern } from "../Patterns/patterns";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export const Drawer = () => {
   const [isShowingDrawer, setIsShowingDrawer] = useState<boolean>(true);
+  const [deviceWidth, setDeviceWidth] = useState<number>(0);
+  const [displayMode, setDisplayMode] = useState<string>("none");
+
+  useEffect(() => {
+    setDeviceWidth(window.innerWidth);
+    if (window.innerWidth <= 868) setDisplayMode("inline");
+    console.log(displayMode, deviceWidth);
+  }, [displayMode, deviceWidth]);
 
   const drawerList = [
     "Woman’s Fashion",
@@ -27,8 +36,8 @@ export const Drawer = () => {
 
   return (
     <DrawerContainer
-      paddingLeft={isShowingDrawer ? "10vw" : "0"}
-      width={isShowingDrawer ? "30vw" : "15vw"}
+      $paddingLeft={isShowingDrawer ? "10vw" : "0"}
+      $width={isShowingDrawer ? "30vw" : "15vw"}
     >
       {isShowingDrawer && (
         <DrawerContent>
@@ -36,17 +45,20 @@ export const Drawer = () => {
             {drawerList.map((item) => {
               return (
                 <BtnLink key={Math.random()}>
-                  <DrawerBtnLinkList>{item}</DrawerBtnLinkList>
+                  <DrawerBtnLink href={""}>{item}</DrawerBtnLink>
                 </BtnLink>
               );
             })}
           </DrawerBtnLinkList>
         </DrawerContent>
       )}
+
       <DrawerBurguerIcon
+        $displayIcon={displayMode}
         name='Burguer'
         onClick={() => setIsShowingDrawer(!isShowingDrawer)}
       />
+
       <Pattern.VerticalLine />
     </DrawerContainer>
   );

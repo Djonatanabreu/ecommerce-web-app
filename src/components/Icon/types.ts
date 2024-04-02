@@ -8,6 +8,7 @@ export type IconName =
   | "MagnifyingGlass"
   | "ArrowDown"
   | "Wishlist"
+  | "Burguer"
   | "ShoppingCart";
 
 export interface IconProps extends SVGProps<SVGSVGElement> {
